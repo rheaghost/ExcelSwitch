@@ -1,0 +1,73 @@
+{
+    "001": {
+        "name": "read_excel",
+        "description": "Read an Excel workbook and display basic information",
+        "script": "templates/001_read_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "002": {
+        "name": "remove_duplicates",
+        "description": "Remove duplicate rows from an Excel workbook",
+        "script": "templates/002_remove_duplicates/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "003": {
+        "name": "fill_missing",
+        "description": "Fill missing values in an Excel workbook",
+        "script": "templates/003_fill_missing/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "004": {
+        "name": "combine_excel",
+        "description": "Combine two Excel files by appending their rows",
+        "script": "templates/004_combine_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input_1",
+                "label": "Enter FIRST Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "input_2",
+                "label": "Enter SECOND Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    }
+}

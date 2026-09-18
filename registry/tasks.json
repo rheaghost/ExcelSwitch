@@ -1,0 +1,653 @@
+{
+    "001": {
+        "name": "read_excel",
+        "description": "Read an Excel workbook and display basic information",
+        "script": "templates/001_read_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "002": {
+        "name": "remove_duplicates",
+        "description": "Remove duplicate rows from an Excel workbook",
+        "script": "templates/002_remove_duplicates/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "003": {
+        "name": "fill_missing",
+        "description": "Fill missing values in an Excel workbook",
+        "script": "templates/003_fill_missing/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "004": {
+        "name": "combine_excel",
+        "description": "Combine two Excel files by appending their rows",
+        "script": "templates/004_combine_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input_1",
+                "label": "Enter FIRST Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "input_2",
+                "label": "Enter SECOND Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "005": {
+        "name": "split_excel",
+        "description": "Split an Excel workbook into separate files by a column",
+        "script": "templates/005_split_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "column",
+                "label": "Enter column to split by",
+                "type": "text"
+            },
+            {
+                "name": "output_directory",
+                "label": "Enter output directory path",
+                "type": "directory"
+            }
+        ]
+    },
+
+    "006": {
+        "name": "change_dates",
+        "description": "Convert dates to YYYY-MM-DD format",
+        "script": "templates/006_change_dates/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "column",
+                "label": "Enter date column name",
+                "type": "text"
+            }
+        ]
+    },
+
+    "007": {
+        "name": "add_total",
+        "description": "Add a total row to numeric columns",
+        "script": "templates/007_add_total/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            }
+        ]
+    },
+
+    "008": {
+        "name": "rename_columns",
+        "description": "Rename one or more Excel columns",
+        "script": "templates/008_rename_columns/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "rename_map",
+                "label": "Enter column rename mapping",
+                "type": "rename_map"
+            }
+        ]
+    },
+
+    "009": {
+        "name": "filter_rows",
+        "description": "Filter rows where a column contains specific text",
+        "script": "templates/009_filter_rows/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "column",
+                "label": "Enter column to filter",
+                "type": "text"
+            },
+            {
+                "name": "value",
+                "label": "Enter text to search for",
+                "type": "text"
+            }
+        ]
+    },
+
+    "010": {
+        "name": "clean_text",
+        "description": "Clean whitespace and standardize text fields",
+        "script": "templates/010_clean_text/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input",
+                "label": "Enter input Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "columns",
+                "label": "Enter text column names, comma separated",
+                "type": "text_list"
+            }
+        ]
+    },
+
+    "011": {
+        "name": "merge_excel",
+        "description": "Merge two Excel files using a common key column",
+        "script": "templates/011_merge_excel/v1_basic.py",
+        "parameters": [
+            {
+                "name": "input_1",
+                "label": "Enter FIRST Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "input_2",
+                "label": "Enter SECOND Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "output",
+                "label": "Enter output Excel file path",
+                "type": "file"
+            },
+            {
+                "name": "key",
+                "label": "Enter common key column name",
+                "type": "text"
+            }
+        ]
+    },
+"012": {
+    "name": "unpivot_excel",
+    "description": "Convert a wide Excel table into a long format",
+    "script": "templates/012_unpivot_excel/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "id_columns",
+            "label": "Enter ID columns, comma separated",
+            "type": "text_list"
+        },
+        {
+            "name": "value_columns",
+            "label": "Enter columns to unpivot, comma separated",
+            "type": "text_list"
+        },
+        {
+            "name": "variable_name",
+            "label": "Enter new variable column name",
+            "type": "text"
+        },
+        {
+            "name": "value_name",
+            "label": "Enter new value column name",
+            "type": "text"
+        }
+    ]
+},
+"013": {
+    "name": "pivot_table",
+    "description": "Create a pivot table from Excel data",
+    "script": "templates/013_pivot_table/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "index_column",
+            "label": "Enter row/index column",
+            "type": "text"
+        },
+        {
+            "name": "columns_column",
+            "label": "Enter pivot column",
+            "type": "text"
+        },
+        {
+            "name": "values_column",
+            "label": "Enter values column",
+            "type": "text"
+        }
+    ]
+},
+"014": {
+    "name": "replace_na",
+    "description": "Replace N/A, n/a and NA with missing values",
+    "script": "templates/014_replace_na/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        }
+    ]
+},
+"015": {
+    "name": "email_excel",
+    "description": "Prepare an Outlook email with an Excel attachment",
+    "script": "templates/015_email_excel/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter Excel file to attach",
+            "type": "file"
+        },
+        {
+            "name": "recipient",
+            "label": "Enter recipient email address",
+            "type": "text"
+        },
+        {
+            "name": "subject",
+            "label": "Enter email subject",
+            "type": "text"
+        },
+        {
+            "name": "body",
+            "label": "Enter email body",
+            "type": "text"
+        }
+    ]
+},
+"016": {
+    "name": "apply_formula",
+    "description": "Create a new column by multiplying two numeric columns",
+    "script": "templates/016_apply_formula/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "column_1",
+            "label": "Enter first numeric column",
+            "type": "text"
+        },
+        {
+            "name": "column_2",
+            "label": "Enter second numeric column",
+            "type": "text"
+        },
+        {
+            "name": "new_column",
+            "label": "Enter new column name",
+            "type": "text"
+        }
+    ]
+},
+"017": {
+    "name": "highlight_above_average",
+    "description": "Highlight numeric cells above the column average",
+    "script": "templates/017_highlight_above_average/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "column",
+            "label": "Enter column to analyze",
+            "type": "text"
+        }
+    ]
+},
+"018": {
+    "name": "pivot_new_sheet",
+    "description": "Add a pivot summary as a new worksheet while preserving the original workbook",
+    "script": "templates/018_pivot_new_sheet/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "index_column",
+            "label": "Enter row/index column",
+            "type": "text"
+        },
+        {
+            "name": "columns_column",
+            "label": "Enter pivot column",
+            "type": "text"
+        },
+        {
+            "name": "values_column",
+            "label": "Enter values column",
+            "type": "text"
+        }
+    ]
+},
+"019": {
+    "name": "sheets_to_csv",
+    "description": "Save every worksheet in an Excel workbook as a separate CSV file",
+    "script": "templates/019_sheets_to_csv/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output_directory",
+            "label": "Enter output directory path",
+            "type": "directory"
+        }
+    ]
+},
+"020": {
+    "name": "compare_excel",
+    "description": "Compare two Excel files and report added, removed and changed records",
+    "script": "templates/020_compare_excel/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input_1",
+            "label": "Enter FIRST Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "input_2",
+            "label": "Enter SECOND Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "key",
+            "label": "Enter common key column name",
+            "type": "text"
+        }
+    ]
+},
+"021": {
+    "name": "progress_bar",
+    "description": "Process Excel rows while displaying a progress bar",
+    "script": "templates/021_progress_bar/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        }
+    ]
+},
+"022": {
+    "name": "logging",
+    "description": "Process an Excel file and record actions in a log file",
+    "script": "templates/022_logging/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "log_file",
+            "label": "Enter log file path",
+            "type": "file"
+        }
+    ]
+},
+"023": {
+    "name": "error_handling",
+    "description": "Process an Excel file while handling common errors gracefully",
+    "script": "templates/023_error_handling/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "required_column",
+            "label": "Enter required column name, or leave blank",
+            "type": "text"
+        }
+    ]
+},
+"024": {
+    "name": "file_picker",
+    "description": "Use a graphical interface to select an input and output Excel file",
+    "script": "templates/024_file_picker/v1_basic.py",
+    "parameters": []
+},
+"025": {
+    "name": "large_excel",
+    "description": "Process a large XLSX workbook using low-memory streaming modes",
+    "script": "templates/025_large_excel/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        }
+    ]
+},
+"025": {
+    "name": "large_excel",
+    "description": "Process a large XLSX workbook using low-memory streaming modes",
+    "script": "templates/025_large_excel/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        }
+    ]
+},
+"026": {
+    "name": "folder_watcher",
+    "description": "Watch a folder and detect newly created Excel files",
+    "script": "templates/026_folder_watcher/v1_basic.py",
+    "parameters": [
+        {
+            "name": "watch_directory",
+            "label": "Enter folder to watch",
+            "type": "directory"
+        }
+    ]
+},
+"027": {
+    "name": "backup_and_organize",
+    "description": "Copy Excel files into a backup folder organized by date",
+    "script": "templates/027_backup_and_organize/v1_basic.py",
+    "parameters": [
+        {
+            "name": "source_directory",
+            "label": "Enter source directory path",
+            "type": "directory"
+        },
+        {
+            "name": "backup_directory",
+            "label": "Enter backup root directory path",
+            "type": "directory"
+        }
+    ]
+},
+"028": {
+    "name": "generate_sample_data",
+    "description": "Generate a synthetic Excel workbook for testing",
+    "script": "templates/028_generate_sample_data/v1_basic.py",
+    "parameters": [
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "rows",
+            "label": "Enter number of rows to generate",
+            "type": "integer"
+        }
+    ]
+},
+"029": {
+    "name": "report_with_charts",
+    "description": "Create an Excel sales report with summary statistics and a chart",
+    "script": "templates/029_report_with_charts/v1_basic.py",
+    "parameters": [
+        {
+            "name": "input",
+            "label": "Enter input Excel file path",
+            "type": "file"
+        },
+        {
+            "name": "output",
+            "label": "Enter output Excel file path",
+            "type": "file"
+        }
+    ]
+},
+"030": {
+    "name": "package_as_exe",
+    "description": "Standalone Excel processor suitable for packaging as a Windows executable",
+    "script": "templates/030_package_as_exe/v1_basic.py",
+    "parameters": []
+}
+
+}

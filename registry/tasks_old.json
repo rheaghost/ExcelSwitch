@@ -1,0 +1,23 @@
+{
+    "001": {
+        "name": "read_excel",
+        "description": "Inspect an Excel workbook",
+        "script": "templates/001_read_excel/v1_basic.py"
+    },
+    "002": {
+        "name": "remove_duplicates",
+        "description": "Remove duplicate rows",
+        "script": "templates/002_remove_duplicates/v1_basic.py"
+    }
+    ,
+    "003": {
+        "name": "fill_missing",
+        "description": "Fill missing values",
+        "script": "templates/003_fill_missing/v1_basic.py"
+    },
+    "004": {
+        "name": "combine_excel",
+        "description": "Combine Excel files",
+        "script": "templates/004_combine_excel/v1_basic.py"
+    }
+}

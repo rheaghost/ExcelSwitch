@@ -1,0 +1,80 @@
+# https://chatgpt.com/c/6a92cd47-160c-83e8-9b00-399399aaf71f
+from openpyxl import load_workbook
+from openpyxl.styles import PatternFill
+
+
+def run(task):
+
+    input_file = task["input"]
+    output_file = task["output"]
+    column_name = task["column"]
+
+    workbook = load_workbook(input_file)
+    worksheet = workbook.active
+
+    # Find the requested column from the header row
+    column_number = None
+
+    for cell in worksheet[1]:
+        if cell.value == column_name:
+            column_number = cell.column
+            break
+
+    if column_number is None:
+        raise ValueError(
+            f"Column '{column_name}' does not exist."
+        )
+
+    # Collect numeric values
+    values = []
+
+    for row in range(2, worksheet.max_row + 1):
+        value = worksheet.cell(row=row, column=column_number).value
+
+        if isinstance(value, (int, float)):
+            values.append(value)
+
+    if not values:
+        raise ValueError(
+            f"No numeric values found in column '{column_name}'."
+        )
+
+    average = sum(values) / len(values)
+
+    # Highlight cells above average
+    fill = PatternFill(
+        fill_type="solid",
+        fgColor="FFFF00"
+    )
+
+    highlighted = 0
+
+    for row in range(2, worksheet.max_row + 1):
+
+        cell = worksheet.cell(
+            row=row,
+            column=column_number
+        )
+
+        if isinstance(cell.value, (int, float)):
+            if cell.value > average:
+                cell.fill = fill
+                highlighted += 1
+
+    workbook.save(output_file)
+
+    print("\nAbove-average cells highlighted.")
+    print(f"Column     : {column_name}")
+    print(f"Average    : {average:.2f}")
+    print(f"Highlighted: {highlighted}")
+    print(f"Output     : {output_file}")
+
+    return {
+        "success": True,
+        "task_id": "017",
+        "input": input_file,
+        "output": output_file,
+        "column": column_name,
+        "average": average,
+        "highlighted": highlighted
+    }

@@ -1,0 +1,3 @@
+read_only / write_only streaming is excellent for moving through large cell data, but this V1 is not intended to preserve every aspect of an existing Excel workbook's formatting, charts, formulas, tables, macros, etc. It is an efficient data-processing primitive.
+
+That limitation is important for the eventual product: the AI selector should know when a task is a data transformation versus a format-preserving Excel edit.
