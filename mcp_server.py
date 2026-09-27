@@ -11,7 +11,8 @@
 
 import json
 from flask import Flask, request, jsonify
-from excel_tools import list_tasks, execute
+from excel_tools import list_tasks, execute,list_sample_files
+
 
 app = Flask(__name__)
 
@@ -35,6 +36,11 @@ TOOLS = {
         "description": "Run an Excel task by ID with parameters.",
         "inputSchema": _schema(task_id="string", params="object"),
         "handler": lambda args: execute(args["task_id"], args.get("params", {})),
+    },
+        "list_sample_files": {
+        "description": "List all sample Excel files available on the server.",
+        "inputSchema": {"type": "object", "properties": {}},
+        "handler": lambda args: list_sample_files(),
     },
 }
 
